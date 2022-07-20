@@ -16,18 +16,19 @@
 
 /*1) Создать любой компонент.Создать для этого компонента новое состояние,
     и две кнопки, одна прибавляет значение на 1, а другая уменьшает на 1.*/
+
 /*import React, { useState } from 'react';
 
 function State() {
-    const [text, setText] = useState(0);
+    const [number, setNumber] = useState(0);
 
     return (
         <div>
-            <p>{text}</p>
-            <button onClick={() => setText(text + 1)}>
+            <p>{number}</p>
+            <button onClick={() => setNumber(number + 1)}>
                 +1
             </button>
-            <button onClick={() => setText(text - 1)}>
+            <button onClick={() => setNumber(number - 1)}>
                 -1
             </button>
         </div>
@@ -42,20 +43,21 @@ export default State*/
 import React, { useState } from 'react';
 
 function State() {
-    const [text, setText] = useState(0);
+    const [number, setNumber] = useState(0);
 
     return (
         <div>
-            <p>{text}</p>
-            <button onClick={() => setText(text + 1)}>
+            <p>{number}</p>
+            <button onClick={() => setNumber(number + 1)}>
                 +1
             </button>
-            <button onClick={() => setText(text + 5)}>
+            <button onClick={() => setNumber(number + 5)}>
                 +5
             </button>
-            <button onClick={() => setText(text + 10)}>
+            <button onClick={() => setNumber(number + 10)}>
                 +10
             </button>
+            <button onClick={() => setNumber(0)}>Clear</button>
         </div>
     );
 }
