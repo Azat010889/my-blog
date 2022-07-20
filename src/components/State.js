@@ -1,4 +1,31 @@
-/*import React, {useState} from "react";
+import React, {useState} from "react";
+
+const State = () => {
+
+    let [text, setText] = useState('No click');
+
+    const check = () => {
+        if (text === "No click") {
+            setText("click");
+        } else {
+            setText('No click');
+        }
+    }
+
+    return (
+        <div className="container">
+            <button onClick={check}>Click me</button>
+            <p>{text}</p>
+        </div>
+    );
+}
+
+export default State;
+
+
+
+/*
+import React, {useState} from "react";
 
  const State = () => {
      const [text,setText] = useState('No click');
@@ -10,14 +37,18 @@
          </div>
      )
  }
- export default State;*/
+ export default State;
+ */
 
 
 
-/*1) Создать любой компонент.Создать для этого компонента новое состояние,
-    и две кнопки, одна прибавляет значение на 1, а другая уменьшает на 1.*/
+/*
+1) Создать любой компонент.Создать для этого компонента новое состояние,
+    и две кнопки, одна прибавляет значение на 1, а другая уменьшает на 1.
+*/
 
-/*import React, { useState } from 'react';
+/*
+import React, { useState } from 'react';
 
 function State() {
     const [number, setNumber] = useState(0);
@@ -34,12 +65,16 @@ function State() {
         </div>
     );
 }
-export default State*/
+export default State
+*/
 
-/*2) Создать любой компонент.
+/*
+2) Создать любой компонент.
     Создать для этого компонента новое состояние, и три кнопки,
-    одна увеличивает на 1, другая на 5, третья на 10.*/
+    одна увеличивает на 1, другая на 5, третья на 10.
+*/
 
+/*
 import React, { useState } from 'react';
 
 function State() {
@@ -62,5 +97,6 @@ function State() {
     );
 }
 export default State
+*/
 
 
