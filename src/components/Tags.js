@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {tags} from "./constants";
 
 const margin = {
@@ -6,8 +6,19 @@ const margin = {
 }
 
 const Tag = (props) =>{
+    const [active,setActive] = useState('w3-tag w3-light-grey w3-small');
+        if (active === 'w3-black'){
+            setActive('w3-tag w3-light-grey w3-small');
+        }
+
+
+    const activated = () =>{
+        props.checkActive();
+    }
+
     return(
         <span
+            onClick={activated}
             className="w3-tag w3-light-grey w3-small w3-margin-bottom"
             style={margin}>
             {props.name}
@@ -17,7 +28,33 @@ const Tag = (props) =>{
 
 const Tags = () => {
 
-    const tagsArray = tags.map(item =><Tag name={item}/>);
+    const [tag, setTag] = useState('');
+
+    const checkActive = () => {
+        setTag('work');
+    }
+
+    const removeActive = () => {
+        const elements = document.querySelector('.w3-tag');
+
+        for (let i = 0; i < elements.length; i++){
+            if (elements[i].classList.contains('w3-black')){
+                elements[i].classList.remove('w3-black');
+                elements[i].classList.add('w3-light-grey');
+                elements[i].classList.remove('w3-small');
+            }
+        }
+    }
+
+    const activated = (e) =>{
+        removeActive();
+        e.target.classList.add('w3-black');
+        e.target.classList.add('w3-light-grey');
+        e.target.classList.add('w3-small');
+    }
+
+
+    const tagsArray = tags.map(item => <Tag checkActive={checkActive} name={item}/>)
 
 
     return(
@@ -28,7 +65,17 @@ const Tags = () => {
                 </div>
                 <div className="w3-container w3-white">
                     <p>
-                        {tagsArray}
+                        {
+                            tags.map(item => (
+                                <span
+                                onClick={activated}
+                                className={'w3-tag w3-margin-bottom w3-light-grey w3-small'}
+                                style={margin}>
+                                    {item}
+                                </span>
+
+                            ))
+                        }
                     </p>
                 </div>
             </div>

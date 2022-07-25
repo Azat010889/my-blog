@@ -4,8 +4,6 @@ import Header from "./components/Header";
 import BlogEntries from "./components/BlogEntries";
 import IntroductionMenu from "./components/IntroductionMenu";
 import Footer from "./components/Footer";
-import ComponentA from "./components/componentA/ComponentA";
-import ComponentB from "./components/componentB/ComponentB";
 
 
 function App() {
@@ -16,8 +14,6 @@ function App() {
               <div className="w3-row">
                  <BlogEntries/>
                  <IntroductionMenu/>
-                 <ComponentA/>
-                 <ComponentB/>
               </div>
           </div>
               <Footer/>
