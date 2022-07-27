@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Contacts.module.css';
 
-const Contacts = () => {
+const Contacts = (contacts) => {
     return (
         <div className={styles.contacts}>
-            <h1>Страничка контакты</h1>
+            <h1>{contacts.text}</h1>
         </div>
     );
 };

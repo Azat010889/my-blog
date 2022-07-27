@@ -9,6 +9,9 @@ const Header = () => {
                 <li><a href="/about">О нас</a></li>
                 <li><a href="/contacts">Контакты</a></li>
                 <li><a href="/products">Продукты</a></li>
+                <li><a href="/catalog/iphone">Телефоны</a></li>
+                <li><a href="/catalog/macBook">Компьютеры</a></li>
+
             </ul>
         </div>
     );

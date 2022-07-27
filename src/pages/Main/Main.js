@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Main.module.css";
 
-const Main = () => {
+const Main = (props) => {
     return(
         <div className={styles.main}>
             <h1>Главная страничка</h1>
+            <p>{props.pageName}</p>
         </div>
     )
 }
