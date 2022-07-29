@@ -4,7 +4,7 @@ import styles from './Header.module.css'
 
 const Header = () => {
 
-    const setActive = ({isActive}) =>  isActive ? "active" : "";
+    const setActive = ({isActive}) =>  isActive ? styles.active : "";
 
     return (
         <div className={styles.header}>
