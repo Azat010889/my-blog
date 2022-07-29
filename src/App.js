@@ -18,8 +18,9 @@ import MacBook from "./pages/MacBook/MacBook";
 function App() {
   return (
     <>
-      <Header/>
+
       <BrowserRouter>
+          <Header/>
         <Routes>
             <Route path="/" element={<Main pageName="Главная страничка"/>}/>
             <Route path="/about" element={<About text="Здесь должна быть информация о нас"/>}/>
