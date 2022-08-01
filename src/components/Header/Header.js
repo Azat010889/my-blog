@@ -16,7 +16,6 @@ const Header = () => {
                 <li><NavLink className={setActive} to="/catalog">Каталог</NavLink></li>
                 <li><NavLink className={setActive} to="/catalog/iphone">Телефоны</NavLink></li>
                 <li><NavLink className={setActive} to="/catalog/macBook">Компьютеры</NavLink></li>
-
             </ul>
         </div>
     );

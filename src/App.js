@@ -25,12 +25,13 @@ function App() {
             <Route path="/" element={<Main pageName="Главная страничка"/>}/>
             <Route path="/about" element={<About text="Здесь должна быть информация о нас"/>}/>
             <Route path="/contacts" element={<Contacts text="Здесь должны отоброжаться контакты"/>}/>
-            <Route path="/products" element={<Product text="Здесь наши продукты"/>}/>
+            <Route path="/products/:name" element={<Product text="Этот продукт"/>}/>
 
             <Route path="/catalog" element={<Catalog/>}>
                 <Route path="iphone" element={<Iphone/>}/>
                 <Route path="macBook" element={<MacBook/>}/>
             </Route>
+
 
             <Route path="*" element={<NotFound/>}/>
         </Routes>
